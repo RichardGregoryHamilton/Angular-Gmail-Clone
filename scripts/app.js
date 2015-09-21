@@ -15,4 +15,3 @@ angular.module('myApp', ['ngRoute'])
                 redirectTo: '/inbox'
             });
     }]);
-

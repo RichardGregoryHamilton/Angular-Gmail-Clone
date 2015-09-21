@@ -1,44 +1,22 @@
 <html ng-app="myApp">
   <head>
-    <title>Angular Gmail App</title>
+    <meta charset="utf-8">
+    <title>Angular Gmail Clone</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div ng-view>
-    </div>
-    <div ng-controller="InboxCtrl">
-      <div class="inbox">
-        <div class="inbox-count">
-          <p>You have {{ inbox.messages.length || 'no' }} messages</p>
-        </div>
-        <div ng-hide="!inbox.messages.length">
-          <input type="text" class="inbox-search" ng-model="inbox.search"
-          placeholder="Search by 'from', e.g. TicketMaster" />
-        </div>
-        <ul class="inbox-list">
-          <li ng-show="!inbox.messages.length">
-            No messages! Try sending one to a friend.
-          </li>
-          <li ng-repeat="message in inbox.messages | filter: { from: inbox.search }">
-            <div class="inbox-list-info">
-              <p class="inbox-list-from"> from: {{ message.from }}</p>
-              <p class="inbox-list-date"> {{ message.date | date: 'dd/MM/yyyy' }}</p>
-              <p class="inbox-list-subject"> {{ message.subject }}</p>
-            </div>
-            <div class="inbox-list-actions">
-              <a href="#" ng-click="inbox.goToMessage(message.id);">Read</a>
-              <a href="#" ng-click="inbox.deleteMessage(id, $index);">Delete</a>
-            </div>
-          </li>
-        </ul>
+  
+    <main class="main" role="main">
+      <div ng-view class="flex">
       </div>
-    </div>
+    </main>
     
-    <script src="jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/InboxFactory.js"></script>
-    <script src="scripts/InboxDirective.js"></script>
-    <script src="scripts/InboxCtrl.js"></script>
+    <script src="scripts/factories/InboxFactory.js"></script>
+    <script src="scripts/directives/InboxDirective.js"></script>
+    <script src="scripts/controllers/InboxCtrl.js"></script>
   </body>
 </html>

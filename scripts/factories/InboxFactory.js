@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .factory('InboxFactory', ['$q', '$http', '$location', function($http,$q,$location) {
+    .factory('InboxFactory', ['$q', '$http', '$location', function($q,$http,$location) {
         var exports = {};
         exports.messages = [];
         
@@ -15,7 +15,7 @@ angular.module('myApp')
         
         exports.getMessages = function() {
             var deferred = $q.defer();
-            $http.get('/json/emails.json')
+            $http.get('json/emails.json')
                 .success(function(data) {
                     exports.messages = data;
                     deferred.resolve(data);
@@ -25,4 +25,6 @@ angular.module('myApp')
                 });
                 return deferred.promise;
             };
+        
+        return exports;
     }]);
