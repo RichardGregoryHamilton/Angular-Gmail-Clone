@@ -3,7 +3,7 @@ angular.module('myApp', ['ngRoute'])
         $routeProvider
             .when('/inbox', {
                 templateUrl: 'views/inbox.html',
-                controller: 'inboxCtrl',
+                controller: 'InboxCtrl',
                 controllerAs: 'inbox'
             })
             .when('/inbox/email/:id', {
