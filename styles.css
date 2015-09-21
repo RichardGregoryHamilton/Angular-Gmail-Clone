@@ -92,7 +92,7 @@ ul, ol {
 .inbox__list li:last-child {
   border-bottom: 1px solid #ccc;
 }
-.inbox__count {
+.inbox-count {
   margin: 0 0 10px 0;
 }
 
@@ -102,7 +102,7 @@ ul, ol {
   padding: 25px;
 }
 
-.inbox__search {
+.inbox-search {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 6px 10px;
@@ -110,35 +110,36 @@ ul, ol {
   width: 250px;
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
-.inbox__search:focus {
+
+.inbox-search:focus {
   outline: 0;
   border-color: #aaa;
 }
 
-.inbox__list-info {
+.inbox-list-info {
   display: inline-block;
   left: 0;
   width: 80%;
   padding-left: 25px;
 }
 
-.inbox__list-date {
+.inbox-list-date {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.inbox__list-actions {
+.inbox-list-actions {
   margin: 10px 0 0;
   display: inline-block;
   right: 0;
   margin-left: 25px;
 }
 
-.inbox__list-subject {
+.inbox-list-subject {
   font-weight: 900;
 }
 
-.inbox__list-actions a {
+.inbox-list-actions a {
   margin: 0 10px 0 0;
   font-weight: 900;
   display: inline-block;
@@ -150,6 +151,6 @@ ul, ol {
   background: #dd1d18;
 }
 
-.inbox__list-actions a:hover {
+.inbox-list-actions a:hover {
   background: #a6120d;
 }

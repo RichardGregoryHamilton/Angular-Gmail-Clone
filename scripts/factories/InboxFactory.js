@@ -15,7 +15,7 @@ angular.module('myApp')
         
         exports.getMessages = function() {
             var deferred = $q.defer();
-            $http.get('json/emails.json')
+            return $http.get('json/emails.json')
                 .success(function(data) {
                     exports.messages = data;
                     deferred.resolve(data);
